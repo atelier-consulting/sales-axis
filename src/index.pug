@@ -6,99 +6,105 @@ html
     link(href="./root.css", rel="stylesheet")
   body
     header
-      h1 SalesAxis
-      nav.auth
-        ul
-          li:a Log in
-          li:a Sign up
+      .box.flex.justify-between
+        h1 SalesAxis
+        nav.auth
+          ul.flex
+            li: a Log in
+            li: a Sign up
 
     section.trending-product
-      h2 Trending Product
-      article
-        h3 Business Network for Logistics
-        p
-          | It is a long established fact that a reader will be distracted
-          | by the readable content of a page when looking at its layout.
-        ul
-          li Product commission: 12%
-          li Project size range: 500K USD
+      .box
+        article
+          h2.text-center(class="md:text-left") Trending Product
+          h3.text-center(class="md:text-left") Business Network for Logistics
+          p.hidden(class="md:block")
+            | It is a long established fact that a reader will be distracted
+            | by the readable content of a page when looking at its layout.
+          ul.flex.justify-between(class="md:justify-start")
+            li.text-xxs.p-2.bg-slate-300.text-white Product commission: 12%
+            li.text-xxs.p-2.bg-slate-300.text-white.ml-4 Project size range: 500K USD
 
     section.top-products
-      h2 Top Products by Leads Industries 
-      .track
-        article.product
-          figure:img
-          h4 Consulting
-          h3 Southeast Asia market research and management consulting services
-          ul.attributes.compact
-            li.commission.highlight
-              .icon %
-              .title Commission
-              .value 15%
-            li.project-size.accent
-              .icon $
-              .title Project size range
-              .value $60K+
+      .box
+        h2.text-center Top Products by Leads Industries 
+        .track.flex
+          article.product(class="w-1/3")
+            figure: img
+            h4 Consulting
+            h3 Southeast Asia market research and management consulting services
+            ul.attributes.compact
+              li.commission.highlight.flex
+                .icon %
+                .title Commission
+                .value 15%
+              li.project-size.accent.flex
+                .icon $
+                .title Project size range
+                .value $60K+
 
     section.top-lead-types
-      h2 Top Successful Type of Leads
-      .track
-        article.lead
-          .description
-            h3 Wholesale Consumer Goods: Personal Protection Equipment
-            h4 Procurement Director / Product Manager
-            p
-              | Do you have any leads match the same position?
-              | Lets connect and earn commission.
-          ul.attributes
-            li.conversion-rate
-              .title Conversion rate
-              .value 22%
-            li.average-commission
-              .title Average Commission
-              .value $50K
-
+      .box
+        h2 Top Successful Type of Leads
+        .track
+          article.lead
+            .description
+              h3 Wholesale Consumer Goods: Personal Protection Equipment
+              h4 Procurement Director / Product Manager
+              p
+                | Do you have any leads match the same position?
+                | Lets connect and earn commission.
+            ul.attributes
+              li.conversion-rate
+                .title Conversion rate
+                .value 22%
+              li.average-commission
+                .title Average Commission
+                .value $50K
 
     section.about
-      h2 Who We Are
-      article:p
-        | Sales Axis is the platform for solution providers who are looking
-        | to connect with more front end sales & consultants. And it's for
-        | front end sales who are looking for new solution to sell. Simply
-        | fill out the required information, and you'll get matched with
-        | relevant solution providers.
+      .box
+        h2 Who We Are
+        article: p
+          | Sales Axis is the platform for solution providers who are looking
+          | to connect with more front end sales & consultants. And it's for
+          | front end sales who are looking for new solution to sell. Simply
+          | fill out the required information, and you'll get matched with
+          | relevant solution providers.
 
     section.testimonials
-      h2 What Our Users Say About Us
-      p
-        | A best and cheapest way of getting know learning to make a better
-        | tomorrow.
+      .box
+        h2 What Our Users Say About Us
+        p
+          | A best and cheapest way of getting know learning to make a better
+          | tomorrow.
 
     footer
-      section.app-description
-        img
-        p
-          | Our webapp, Sales Axis, is the platform for solution providers who
-          | are looking to connect with more front end sales & consultants.
-      section.links
-        article
-          h3 Pages
-          ul
-            li:a Product View
-            li:a User dashboard
-            li:a User's Lead page
-        article
-          h3 About
-          ul
-            li:a Our Story
-            li:a Privacy policy
-      section.newsletter
-        h3 Subscribe to our newsletter
-        form
-          input(type="email", placeholder="Email address")
-          input(type="submit", value=">")
-        ul.social
-          li:a F
-          li:a I
-          li:a T
-          li:a L
+      .box
+        section.app-description
+          img
+          p
+            | Our webapp, Sales Axis, is the platform for solution providers who
+            | are looking to connect with more front end sales & consultants.
+        section.links
+          article
+            h3 Pages
+            ul
+              li: a Product View
+              li: a User dashboard
+              li: a User's Lead page
+          article
+            h3 About
+            ul
+              li: a Our Story
+              li: a Privacy policy
+        section.newsletter
+          h3 Subscribe to our newsletter
+          form
+            input(type="email", placeholder="Email address")
+            input(type="submit", value=">")
+          ul.social
+            li: a F
+            li: a I
+            li: a T
+            li: a L

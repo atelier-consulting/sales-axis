@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,pug}"],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        xxs: ".6125rem",
+      },
+    },
   },
   plugins: [],
   experimental: {
