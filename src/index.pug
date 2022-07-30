@@ -4,5 +4,74 @@ html
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(href="./root.css", rel="stylesheet")
-  body.p-4.bg-neutral-200
-    h1.text-3xl.text-center.font-bold(class="first-letter:italic") Hello world!
+  body
+    header
+      h1 SalesAxis
+      nav.auth
+        ul
+          li:a Log in
+          li:a Sign up
+
+    section.trending-product
+      h2 Trending Product
+      article
+        h3 Business Network for Logistics
+        p
+          | It is a long established fact that a reader will be distracted
+          | by the readable content of a page when looking at its layout.
+        ul
+          li Product commission: 12%
+          li Project size range: 500K USD
+
+    section.top-products
+      h2 Top Products by Leads Industries 
+      .track
+        article.product
+          figure:img
+          h4 Consulting
+          h3 Southeast Asia market research and management consulting services
+          ul.attributes.compact
+            li.commission.highlight
+              .icon %
+              .title Commission
+              .value 15%
+            li.project-size.accent
+              .icon $
+              .title Project size range
+              .value $60K+
+
+    section.top-lead-types
+      h2 Top Successful Type of Leads
+      .track
+        article.lead
+          .description
+            h3 Wholesale Consumer Goods: Personal Protection Equipment
+            h4 Procurement Director / Product Manager
+            p
+              | Do you have any leads match the same position?
+              | Lets connect and earn commission.
+          ul.attributes
+            li.conversion-rate
+              .title Conversion rate
+              .value 22%
+            li.average-commission
+              .title Average Commission
+              .value $50K
+
+
+    section.about
+      h2 Who We Are
+      article: p
+        | Sales Axis is the platform for solution providers who are looking
+        | to connect with more front end sales & consultants. And it's for
+        | front end sales who are looking for new solution to sell. Simply
+        | fill out the required information, and you'll get matched with
+        | relevant solution providers.
+
+    section.testimonials
+      h2 What Our Users Say About Us
+      p
+        | A best and cheapest way of getting know learning to make a better
+        | tomorrow.
+
+    footer
