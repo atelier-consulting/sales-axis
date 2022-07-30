@@ -1,0 +1,16 @@
+{
+  "name": "slice-preset",
+  "version": "1.0.0",
+  "author": "Serge Tymoshenko <serge@tymo.name>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.pug --dist-dir dev",
+    "prod": "parcel build src/index.pug --dist-dir prod --no-source-maps"
+   },
+  "devDependencies": {
+    "@parcel/transformer-pug": "2.6.2",
+    "parcel": "^2.6.2",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6"
+  }
+}
