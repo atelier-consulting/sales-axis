@@ -1,0 +1,52 @@
+.deck {
+  @apply
+    overflow-x-scroll
+    w-screen md:container
+    md:mx-auto
+    snap-x snap-mandatory
+  ;
+}
+
+.track {
+  @apply
+    flex
+    w-[230vw] md:w-auto
+    px-4 md:px-8
+    pb-4
+  ;
+}
+
+.card {
+  @apply
+    block pt-3.5
+    min-w-[32%] w-[32%]
+    ml-[2%] first:ml-0
+    border border-black/5
+    rounded-lg
+    snap-center
+  ;
+}
+
+.card > figure {
+  @apply px-3.5 mb-5;
+}
+
+.card > h4 {
+  @apply
+    px-3.5 pb-1
+    text-xs md:text-sm
+    text-[#2a85ff];
+  ;
+}
+
+.card > h3 {
+  @apply
+    pb-4 mx-3.5
+    border-b border-b-black/5
+  ;
+}
+
+.card > ul {
+  @apply text-sm md:text-base;
+}
+

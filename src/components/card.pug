@@ -1,0 +1,28 @@
+link(href="./components/card.css", rel="stylesheet")
+
+mixin card(title, category, image, href)
+  if href
+    a.card(href=href)
+      if image
+        figure(class="px-3.5 mb-5")
+          img(src=image)
+      if category
+        h4= category
+      if title
+        h3= title
+      if block
+        ul
+          block
+  else
+    article.card
+      if image
+        figure
+          img(src=image)
+      if category
+        h4= category
+      if title
+        h3= title
+      if block
+        ul
+          block
+
