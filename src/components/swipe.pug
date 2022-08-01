@@ -1,1 +1,10 @@
-mixin swipe()
+link(href="./components/swipe.css", rel="stylesheet")
+
+mixin swipe(items, item_width = 75, gap = 1)
+  - const track_width = items * item_width + "vw"
+  - const gaps = (items + 1) * gap + "rem"
+  if block
+    .swipe
+      .track(class!=attributes.class, style={ width: "calc(" + track_width + " + " + gaps + ")" }, class="md:!w-auto")
+        block
+

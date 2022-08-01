@@ -10,15 +10,6 @@
   ;
 }
 
-.swipe {
-  @apply
-    overflow-x-scroll md:overflow-x-auto
-    w-screen md:w-auto md:max-w-[64rem]
-    md:mx-auto
-    snap-x snap-mandatory
-  ;
-}
-
 h2 {
   @apply
     py-6 md:py-8

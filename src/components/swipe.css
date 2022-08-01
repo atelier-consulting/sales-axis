@@ -1,2 +1,26 @@
 .swipe {
+  @apply
+    overflow-x-scroll md:overflow-x-auto
+    w-screen md:w-auto md:max-w-[64rem]
+    md:mx-auto
+    snap-x snap-mandatory
+  ;
 }
+
+.track {
+  @apply
+    flex flex-row
+    md:w-auto
+    px-4 md:px-8
+    pb-4
+  ;
+}
+
+.track.md\:col {
+  @apply md:flex-col;
+}
+
+.swipe > .track > * {
+  @apply snap-center;
+}
+

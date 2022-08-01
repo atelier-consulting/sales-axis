@@ -1,18 +1,8 @@
-.panels {
-  width: calc(300vw + 5rem);
-  @apply
-    flex flex-row md:flex-col
-    md:w-auto
-    px-4 md:px-8
-    pb-4
-  ;
-}
-
 .panel {
   @apply
     rounded-lg bg-white
     border border-black/5
-    md:shadow-lg hover:shadow-lg
+    md:shadow-lg
     md:h-[7.5rem]
     md:flex
     w-[75vw] md:w-auto min-w-[75vw] md:min-w-0
@@ -70,6 +60,6 @@
     bg-white hover:bg-[#2a85ff]/5
     md:w-32 h-9
     flex items-center justify-center
-    my-6 mx-3.5 md:mx-8
+    my-5 mx-3.5 md:mx-8
   ;
 }

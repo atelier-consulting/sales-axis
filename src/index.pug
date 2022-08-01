@@ -29,66 +29,63 @@ html
     section.top-products
       .box
         h2 Top Products by Leads Industries 
-      .swipe
-        .cards
-          +card("Southeast Asia market research and management consulting services", "Consulting", "img/product-image-1@2x.jpg")
-            +attributes("vertical md:horizontal")
-              +attr("Commission", "15%", "highlight", "%",)
-              +attr("Project size range", "$60K+", "accent", "$")
+      +swipe(3)
+        +card("Southeast Asia market research and management consulting services", "Consulting", "img/product-image-1@2x.jpg")
+          +attributes("vertical md:horizontal")
+            +attr("Commission", "15%", "highlight", "%",)
+            +attr("Project size range", "$60K+", "accent", "$")
 
-          +card("Southeast Asia market research and management consulting services", "Consulting", "img/product-image-1@2x.jpg")
-            +attributes("horizontal md:vertical")
-              +attr("Commission", "15%", "highlight", "%")
-              +attr("Project size range", "$60K+", "accent", "$")
+        +card("Southeast Asia market research and management consulting services", "Consulting", "img/product-image-1@2x.jpg")
+          +attributes("horizontal md:vertical")
+            +attr("Commission", "15%", "highlight", "%")
+            +attr("Project size range", "$60K+", "accent", "$")
 
-          +card("Southeast Asia market research and management consulting services", "Consulting", "img/product-image-1@2x.jpg")
-            +attributes("horizontal md:horizontal")
-              +attr("Commission", "15%", "highlight", "%")
-              +attr("Project size range", "$60K+", "accent", "$")
+        +card("Southeast Asia market research and management consulting services", "Consulting", "img/product-image-1@2x.jpg")
+          +attributes("horizontal md:horizontal")
+            +attr("Commission", "15%", "highlight", "%")
+            +attr("Project size range", "$60K+", "accent", "$")
 
     section.top-lead-types
       .box
         h2 Top Successful Type of Leads
-      //- TODO: +swipe(3)(class="md:flex-col")
-      .swipe
-        .panels
-          +panel(
-            "Operation Director / COO",
-            "Fieldglass Contingent Workforce Management",       
-            "It is a long established fact that a reader will be distracted by the readable content layout.",
-            "img/product-image-1@2x.jpg",
-            "https://google.com",
-          )
-            +attributes("vertical md:vertical")
-              +attr("Conversion rate", "27%", "highlight")
-              +attr("Average commission", "$60K+", "accent")
-          +panel(
-            "Operation Director / COO",
-            "Fieldglass Contingent Workforce Management",       
-            "It is a long established fact that a reader will be distracted by the readable content layout.",
-            "img/product-image-1@2x.jpg",
-          )
-            +attributes("vertical md:vertical")
-              +attr("Conversion rate", "27%", "highlight")
-              +attr("Average commission", "$60K+", "accent")
-          +panel(
-            "Operation Director / COO",
-            "Fieldglass Contingent Workforce Management",       
-            "It is a long established fact that a reader will be distracted by the readable content layout.",
-            "img/product-image-1@2x.jpg",
-          )
-            +attributes("vertical md:vertical")
-              +attr("Conversion rate", "27%", "highlight")
-              +attr("Average commission", "$60K+", "accent")
-          +panel(
-            "Operation Director / COO",
-            "Fieldglass Contingent Workforce Management",       
-            "It is a long established fact that a reader will be distracted by the readable content layout.",
-            "img/product-image-1@2x.jpg",
-          )
-            +attributes("vertical md:vertical")
-              +attr("Conversion rate", "27%", "highlight")
-              +attr("Average commission", "$60K+", "accent")
+      +swipe(4)(class="md:col")
+        +panel(
+          "Operation Director / COO",
+          "Fieldglass Contingent Workforce Management",
+          "It is a long established fact that a reader will be distracted by the readable content layout.",
+          "img/product-image-1@2x.jpg",
+          "https://google.com",
+        )
+          +attributes("vertical md:vertical")
+            +attr("Conversion rate", "27%", "highlight")
+            +attr("Average commission", "$60K+", "accent")
+        +panel(
+          "Operation Director / COO",
+          "Fieldglass Contingent Workforce Management",
+          "It is a long established fact that a reader will be distracted by the readable content layout.",
+          "img/product-image-1@2x.jpg",
+        )
+          +attributes("vertical md:vertical")
+            +attr("Conversion rate", "27%", "highlight")
+            +attr("Average commission", "$60K+", "accent")
+        +panel(
+          "Operation Director / COO",
+          "Fieldglass Contingent Workforce Management",
+          "It is a long established fact that a reader will be distracted by the readable content layout.",
+          "img/product-image-1@2x.jpg",
+        )
+          +attributes("vertical md:vertical")
+            +attr("Conversion rate", "27%", "highlight")
+            +attr("Average commission", "$60K+", "accent")
+        +panel(
+          "Operation Director / COO",
+          "Fieldglass Contingent Workforce Management",
+          "It is a long established fact that a reader will be distracted by the readable content layout.",
+          "img/product-image-1@2x.jpg",
+        )
+          +attributes("vertical md:vertical")
+            +attr("Conversion rate", "27%", "highlight")
+            +attr("Average commission", "$60K+", "accent")
 
     section.about
       .box
@@ -136,3 +133,17 @@ html
             li: a I
             li: a T
             li: a L
+
+    .flex-auto
+      p foo
+    
+    script.
+      const swipes = document.querySelectorAll(".swipe")
+      swipes.forEach(swipe => {
+        const obs = new IntersectionObserver(
+          entries => { entries.forEach(e => e.target.classList.toggle("shadow-lg", e.isIntersecting)) },
+          { root: swipe, threshold: .75, }
+        )
+        const items = swipe.querySelectorAll(".track > *")
+        items.forEach(item => { obs.observe(item) })
+      })

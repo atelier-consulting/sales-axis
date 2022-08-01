@@ -1,8 +1,8 @@
 link(href="./components/panel.css", rel="stylesheet")
 
 mixin panel(title, subtitle, description, image, btn)
-  - let synopsis = title || subtitle || description
-  article.panel
+  - const synopsis = title || subtitle || description
+  article.panel(class!=attributes.class)
     if image
       img(src=image, class="hidden md:block h-[6.25rem]")
     if synopsis
