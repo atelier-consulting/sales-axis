@@ -1,19 +1,19 @@
 link(href="./components/panel.css", rel="stylesheet")
 
-mixin panel(title, subtitle, description, image, href)
-  - let has_synopsis = title || subtitle || description
+mixin panel(title, subtitle, description, image, btn)
+  - let synopsis = title || subtitle || description
   article.panel
     if image
       img(src=image, class="hidden md:block h-[6.25rem]")
-    if has_synopsis
+    if synopsis
       .synopsis
         if title
           h3= title
         if subtitle
           h4= subtitle
         if description
-          p(class={"hidden": !!href})= description
+          p(class={"hidden": !!btn})= description
       if block
         block
-      if href
-        a(href=href) View
+      if btn
+        a(href=btn) View

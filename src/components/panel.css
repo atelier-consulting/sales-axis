@@ -11,11 +11,12 @@
 .panel {
   @apply
     rounded-lg bg-white
-    border border-black/5 md:border-none
+    border border-black/5
+    md:shadow-lg hover:shadow-lg
     md:h-[7.5rem]
     md:flex
     w-[75vw] md:w-auto min-w-[75vw] md:min-w-0
-    ml-4 first:ml-0 md:ml-0
+    ml-4 first:ml-0 md:ml-0 md:mb-5
     snap-center
   ;
 }
@@ -28,7 +29,7 @@
   @apply
     flex-initial
     mx-3.5 md:mx-0
-    pt-3.5
+    pt-3.5 md:pr-4
     border-b border-b-black/5 md:border-none
   ;
 }
@@ -61,4 +62,14 @@
 }
 
 /* TODO */
-.panel a {}
+.panel a {
+  @apply
+    self-center
+    text-[#2a85ff] text-center
+    border border-[#2a85ff] rounded
+    bg-white hover:bg-[#2a85ff]/5
+    md:w-32 h-9
+    flex items-center justify-center
+    my-6 mx-3.5 md:mx-8
+  ;
+}

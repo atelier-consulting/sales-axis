@@ -1,5 +1,6 @@
 .cards {
   width: calc(225vw + 4rem);
+
   @apply
     flex flex-row
     md:w-auto
@@ -15,6 +16,7 @@
     w-[75vw] min-w-[75vw] md:w-auto md:min-w-0
     ml-4 first:ml-0
     border border-black/5
+    md:hover:shadow-lg
     rounded-lg bg-white
     snap-center
   ;
