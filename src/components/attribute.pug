@@ -1,15 +1,15 @@
-mixin attribute(title="Empty", value="0", icon="%", variant="base")
-  - let value_class = "flex items-center pr-3.5"
-  -
-    switch (variant) {
-      case "accent":
-        value_class += " font-bold text-[#2a85ff]"
-        break
-      case "highlight":
-      value_class += " rounded-l-full bg-[#28c25d] text-white pl-4"
-    }
+link(href="./components/attribute.css", rel="stylesheet")
 
-  li.attribute.flex.h-8.my-2.items-stretch(class="pl-3.5 text-[#1a1d1f]/60")
-    .icon.flex-none.flex.items-center.justify-center.w-4(class="mr-1.5")= icon
-    .title.flex-1.flex.items-center= title
-    .value(class=value_class)= value 
+mixin attributes(layout)
+  ul.attributes(class=layout)
+    if block
+      block
+
+mixin attr(title, value, variant, icon, layout)
+  li.attr(class=layout)
+    if icon
+      .icon= icon
+    if title
+      .title= title
+    if value
+      .value(class=variant)= value 

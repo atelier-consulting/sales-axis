@@ -1,16 +1,8 @@
-.deck {
+.cards {
+  width: calc(225vw + 4rem);
   @apply
-    overflow-x-scroll
-    w-screen md:container
-    md:mx-auto
-    snap-x snap-mandatory
-  ;
-}
-
-.track {
-  @apply
-    flex
-    w-[230vw] md:w-auto
+    flex flex-row
+    md:w-auto
     px-4 md:px-8
     pb-4
   ;
@@ -18,17 +10,27 @@
 
 .card {
   @apply
-    block pt-3.5
-    min-w-[32%] w-[32%]
-    ml-[2%] first:ml-0
+    flex flex-col
+    pt-1.5
+    w-[75vw] min-w-[75vw] md:w-auto md:min-w-0
+    ml-4 first:ml-0
     border border-black/5
-    rounded-lg
+    rounded-lg bg-white
     snap-center
   ;
 }
 
 .card > figure {
-  @apply px-3.5 mb-5;
+  @apply px-3.5 pt-2 pb-3.5;
+}
+
+.card > h3 {
+  @apply
+    pb-4 mx-3.5
+    border-b border-b-black/5
+    text-sm md:text-base
+    font-medium
+  ;
 }
 
 .card > h4 {
@@ -39,10 +41,18 @@
   ;
 }
 
-.card > h3 {
+.card > h5 {
   @apply
-    pb-4 mx-3.5
-    border-b border-b-black/5
+    px-3.5 pb-1
+    hidden md:block
+  ;
+}
+
+.card > h6 {
+  @apply
+    px-3.5 pb-1
+    hidden md:block
+    text-xs md:text-sm
   ;
 }
 

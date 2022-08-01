@@ -1,8 +1,12 @@
 link(href="./components/card.css", rel="stylesheet")
 
-mixin card(title, category, image, href)
+mixin card(title, category, image, href, name, position)
   if href
     a.card(href=href)
+      if name
+        h5= name
+      if position
+        h6= position
       if image
         figure(class="px-3.5 mb-5")
           img(src=image)
@@ -11,10 +15,13 @@ mixin card(title, category, image, href)
       if title
         h3= title
       if block
-        ul
-          block
+        block
   else
     article.card
+      if name
+        h5= name
+      if position
+        h6= position
       if image
         figure
           img(src=image)
@@ -23,6 +30,5 @@ mixin card(title, category, image, href)
       if title
         h3= title
       if block
-        ul
-          block
+        block
 

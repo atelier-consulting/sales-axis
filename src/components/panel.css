@@ -1,0 +1,64 @@
+.panels {
+  width: calc(300vw + 5rem);
+  @apply
+    flex flex-row md:flex-col
+    md:w-auto
+    px-4 md:px-8
+    pb-4
+  ;
+}
+
+.panel {
+  @apply
+    rounded-lg bg-white
+    border border-black/5 md:border-none
+    md:h-[7.5rem]
+    md:flex
+    w-[75vw] md:w-auto min-w-[75vw] md:min-w-0
+    ml-4 first:ml-0 md:ml-0
+    snap-center
+  ;
+}
+
+.panel > img {
+  @apply md:mt-2.5 md:ml-2.5 md:mr-4 ;
+}
+
+.panel .synopsis {
+  @apply
+    flex-initial
+    mx-3.5 md:mx-0
+    pt-3.5
+    border-b border-b-black/5 md:border-none
+  ;
+}
+
+.panel h3 {
+  @apply
+    pb-1
+    font-medium
+    text-sm md:text-base
+  ;
+}
+
+.panel h4 {
+  @apply
+    pb-2.5
+    text-xs md:text-sm text-black/80
+  ;
+}
+
+.panel p {
+  @apply
+    md:block
+    pb-2.5 md:pb-0
+    text-xs text-black/60
+  ;
+}
+
+.panel .attributes {
+  @apply flex-auto w-full md:w-1/2 ;
+}
+
+/* TODO */
+.panel a {}

@@ -1,0 +1,187 @@
+.attributes {
+  @apply flex-1 flex py-2;
+}
+
+.attributes.horizontal {
+  @apply flex-col;
+}
+
+.attributes.vertical {
+  @apply flex-row px-3.5;
+}
+
+.attributes.md\:horizontal {
+  @apply md:flex-col md:px-0;
+}
+
+.attributes.md\:vertical {
+  @apply md:flex-row md:px-3.5;
+}
+
+.attributes > .attr {
+  @apply flex;
+}
+
+.attributes.horizontal > .attr {
+  @apply
+    items-stretch
+    h-8 my-2 pl-3.5
+  ;
+}
+
+.attributes.vertical > .attr {
+  @apply
+    flex-1
+    flex-col-reverse
+    justify-around
+  ;
+}
+
+.attributes.md\:horizontal > .attr {
+  @apply
+    md:flex-row md:justify-start
+    md:items-stretch
+    md:h-8
+    md:my-2 md:pl-3.5 md:py-0
+  ;
+}
+
+.attributes.md\:vertical > .attr {
+  @apply
+    md:flex-1
+    md:h-auto md:my-0 md:pl-0
+    md:flex-col-reverse
+    md:justify-around
+  ;
+}
+
+.attributes > .attr > .icon {
+  @apply text-black/60 text-xs md:text-sm;
+}
+
+.attributes.horizontal > .attr > .icon {
+  @apply
+    flex-none
+    flex items-center justify-center
+    w-4 mr-1.5
+  ;
+}
+
+.attributes.vertical > .attr > .icon {
+  @apply hidden;
+}
+
+.attributes.md\:vertical > .attr > .icon {
+  @apply md:hidden;
+}
+
+.attributes.md\:horizontal > .attr > .icon {
+  @apply
+    md:flex-none
+    md:flex md:items-center md:justify-center
+    md:w-4 md:mr-1.5
+  ;
+}
+
+.attributes > .attr > .title {
+  @apply text-black/60 text-xs md:text-sm;
+}
+
+.attributes.horizontal > .attr > .title {
+  @apply
+    flex-auto
+    flex items-center
+  ;
+}
+
+.attributes.vertical > .attr > .title {
+  @apply
+    flex-initial
+    flex items-center
+  ;
+}
+
+.attributes.md\:horizontal > .attr > .title {
+  @apply
+    md:flex-auto
+    md:flex md:items-center
+  ;
+}
+
+.attributes.md\:vertical > .attr > .title {
+  @apply
+    md:flex-initial
+    md:flex md:items-center
+  ;
+}
+
+/* - */
+
+
+.attributes.horizontal > .attr > .value {
+  @apply
+    flex items-center
+    pr-3.5
+  ;
+}
+
+.attributes.horizontal > .attr > .value.accent {
+  @apply font-bold text-[#2a85ff];
+}
+
+.attributes.horizontal > .attr > .value.highlight {
+  @apply rounded-l-full bg-[#28c25d] text-white pl-4;
+}
+
+.attributes.vertical > .attr > .value {
+  @apply flex-initial;
+}
+
+.attributes.vertical > .attr > .value.accent {
+  @apply font-bold text-[#2a85ff] text-lg;
+}
+
+.attributes.vertical > .attr > .value.highlight {
+  @apply font-bold text-[#28c25d] text-lg;
+}
+
+/* ((( */
+
+.attributes.md\:horizontal > .attr > .value {
+  @apply
+    md:flex md:items-center
+    md:pr-3.5
+  ;
+}
+
+.attributes.md\:horizontal > .attr > .value.accent {
+  @apply md:font-bold md:text-[#2a85ff] md:text-base;
+}
+
+.attributes.md\:horizontal > .attr > .value.highlight {
+  @apply
+    md:rounded-l-full
+    md:bg-[#28c25d]
+    md:text-white md:text-base md:font-normal
+    md:pl-4;
+}
+
+.attributes.md\:vertical > .attr > .value {
+  @apply
+    md:flex-initial
+    md:block
+    md:pr-0
+  ;
+}
+
+.attributes.md\:vertical > .attr > .value.accent {
+  @apply md:font-bold md:text-[#2a85ff] md:text-base;
+}
+
+.attributes.md\:vertical > .attr > .value.highlight {
+  @apply
+    md:rounded-none
+    md:bg-transparent
+    md:text-[#28c25d] md:text-lg md:font-bold
+    md:pl-0;
+}
