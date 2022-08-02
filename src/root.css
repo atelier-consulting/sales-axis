@@ -10,6 +10,18 @@
   ;
 }
 
+h1 {
+  @apply
+    indent-offscreen
+    relative
+    w-logo
+    bg-no-repeat
+    bg-center
+    bg-logo
+    -left-2 md:-left-4
+  ;
+}
+
 h2 {
   @apply
     py-6 md:py-8

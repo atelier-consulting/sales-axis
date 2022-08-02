@@ -1,0 +1,61 @@
+.trending-product {
+  @apply relative md:h-trend;
+}
+
+.trending-product > h3 {
+  @apply
+    pb-2
+    text-center md:text-left
+    text-xl md:text-5xl md:text-white
+    font-semibold md:font-bold
+    md:leading-tight md:tracking-wide
+    md:absolute md:z-10
+    md:left-16 md:top-28
+    md:max-w-md
+  ;
+}
+
+.trending-product > h4 {
+  @apply
+    text-center md:text-left
+    text-sm uppercase tracking-wide
+    text-brand-blue md:text-white
+    md:absolute md:z-10
+    md:left-16 md:top-20
+  ;
+}
+
+.trending-product > article {
+  @apply
+    pb-2.5 md:p-4 md:pb-20
+    md:rounded
+    w-full md:max-w-[60rem]
+    md:h-full
+    bg-trend bg-no-repeat bg-center bg-cover
+    flex flex-col justify-between
+  ;
+}
+
+.trending-product > article > p {
+  @apply 
+    text-white text-sm md:text-base
+    px-3.5 pt-12 pb-8 md:pt-60
+    max-w-[70%] md:max-w-[60%]
+  ;
+}
+
+.trending-product > article > ul {
+  @apply
+    flex justify-between md:justify-start
+    pb-2
+  ;
+}
+
+.trending-product > article > ul > li {
+  @apply
+    rounded-sm md:rounded
+    text-white text-xxs md:text-base
+    p-2  ml-3.5 md:py-2 md:px-4 md:ml-4
+    bg-[#c3c3c3]/20
+  ;
+}

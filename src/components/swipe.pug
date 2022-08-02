@@ -1,10 +1,21 @@
 link(href="./components/swipe.css", rel="stylesheet")
 
-mixin swipe(items, item_width = 75, gap = 1)
+script(type="module").
+  const swipes = document.querySelectorAll(".swipe")
+  swipes.forEach(swipe => {
+    const obs = new IntersectionObserver(
+      entries => { entries.forEach(e => e.target.classList.toggle("shadow-lg", e.isIntersecting)) },
+      { root: swipe, threshold: .75, }
+    )
+    const items = swipe.querySelectorAll(".track > *")
+    items.forEach(item => { obs.observe(item) })
+  })
+
+mixin swipe(items, cls, item_width = 75, gap = 1)
   - const track_width = items * item_width + "vw"
   - const gaps = (items + 1) * gap + "rem"
   if block
     .swipe
-      .track(class!=attributes.class, style={ width: "calc(" + track_width + " + " + gaps + ")" }, class="md:!w-auto")
+      .track(class=cls, style={ width: "calc(" + track_width + " + " + gaps + ")" }, class="md:!w-auto")
         block
 

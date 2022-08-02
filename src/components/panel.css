@@ -2,7 +2,6 @@
   @apply
     rounded-lg bg-white
     border border-black/5
-    md:shadow-lg
     md:h-[7.5rem]
     md:flex
     w-[75vw] md:w-auto min-w-[75vw] md:min-w-0

@@ -6,25 +6,21 @@ html
     link(href="./root.css", rel="stylesheet")
     include components/all
   body
-    header
-      .box.flex.justify-between
+    header.border-b(class="border-b-black/5")
+      .box.h-16.flex.justify-between.items-stretch
         h1 SalesAxis
-        nav.auth
-          ul.flex
-            li: a Log in
-            li: a Sign up
+        nav.auth.flex.items-center
+          a.block.ml-4.border.text-xs.px-4.py-2.rounded-sm(class="text-[#979797] md:text-sm border-[#f0f0f0] md:py-1") Log in
+          a.block.ml-4.bg-blue-600.text-white.text-xs.px-4.py-2.rounded-sm(class="md:text-sm md:py-1 bg-[#2a85ff]") Sign up
 
-    section.trending-product
-      .box
-        article(class="pb-2.5 md:p-4 bg-[#7a7b8f]")
-          h3.text-center(class="md:text-left") Trending Product
-          h4.text-center(class="md:text-left") Business Network for Logistics
-          p.hidden(class="md:block")
-            | It is a long established fact that a reader will be distracted
-            | by the readable content of a page when looking at its layout.
-          ul.flex.justify-between(class="md:justify-start")
-            li.text-xxs.p-2.text-white.rounded-sm(class="ml-3.5 md:text-base md:m-0 bg-[#c3c3c3]/20") Product commission: 12%
-            li.text-xxs.p-2.text-white.rounded-sm(class="mr-3.5 md:text-base md:m-0 md:ml-4 bg-[#c3c3c3]/20") Project size range: 500K USD
+    section.pt-6.pb-4
+      +trending_product(
+        "Business Network for Logistics",
+        "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+        "12%",
+        "500K USD",
+        "trending-product@1x.png"
+      )
 
     section.top-products
       .box
@@ -45,10 +41,10 @@ html
             +attr("Commission", "15%", "highlight", "%")
             +attr("Project size range", "$60K+", "accent", "$")
 
-    section.top-lead-types
+    section.top-lead-types.pb-4
       .box
         h2 Top Successful Type of Leads
-      +swipe(4)(class="md:col")
+      +swipe(4, "md:vertical")
         +panel(
           "Operation Director / COO",
           "Fieldglass Contingent Workforce Management",
@@ -87,10 +83,10 @@ html
             +attr("Conversion rate", "27%", "highlight")
             +attr("Average commission", "$60K+", "accent")
 
-    section.about
+    section.about.pt-10.pb-24(class="bg-[#fafafa]")
       .box
         h2 Who We Are
-        article: p
+        p.max-w-2xl.mx-auto.px-4.leading-6.text-center.text-sm(class="text-black/60 md:leading-7 md:text-lg md:font-light")
           | Sales Axis is the platform for solution providers who are looking
           | to connect with more front end sales & consultants. And it's for
           | front end sales who are looking for new solution to sell. Simply
@@ -134,16 +130,16 @@ html
             li: a T
             li: a L
 
-    .flex-auto
-      p foo
-    
-    script.
-      const swipes = document.querySelectorAll(".swipe")
-      swipes.forEach(swipe => {
-        const obs = new IntersectionObserver(
-          entries => { entries.forEach(e => e.target.classList.toggle("shadow-lg", e.isIntersecting)) },
-          { root: swipe, threshold: .75, }
-        )
-        const items = swipe.querySelectorAll(".track > *")
-        items.forEach(item => { obs.observe(item) })
-      })
+  //- TODO: Remove type="module"a when
+  //- https://github.com/parcel-bundler/parcel/commit/a056f1eb60c6baf5f72488d5c367d0635774a42f released
+  script(type="module").
+    const swipes = document.querySelectorAll(".swipe")
+    swipes.forEach(swipe => {
+      const obs = new IntersectionObserver(
+        entries => { entries.forEach(e => e.target.classList.toggle("shadow-lg", e.isIntersecting)) },
+        { root: swipe, threshold: .75, }
+      )
+      const items = swipe.querySelectorAll(".track > *")
+      items.forEach(item => { obs.observe(item) })
+    })
+
