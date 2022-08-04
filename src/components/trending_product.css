@@ -4,7 +4,7 @@
 
 .trending-product > h3 {
   @apply
-    pb-2
+    pb-4
     text-center md:text-left
     text-xl md:text-5xl md:text-white
     font-semibold md:font-bold
