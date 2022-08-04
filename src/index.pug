@@ -20,7 +20,7 @@ html
         "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
         "12%",
         "500K USD",
-        "trending-product@1x.png"
+        "trending-product@1x.png",
       )
 
     section.top-products
@@ -131,9 +131,7 @@ html
             li: a T
             li: a L
 
-  //- TODO: Remove type="module"a when
-  //- https://github.com/parcel-bundler/parcel/commit/a056f1eb60c6baf5f72488d5c367d0635774a42f released
-  script(type="module").
+  script.
     const swipes = document.querySelectorAll(".swipe")
     swipes.forEach(swipe => {
       const obs = new IntersectionObserver(
