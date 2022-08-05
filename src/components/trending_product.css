@@ -55,7 +55,7 @@
   @apply
     rounded-sm md:rounded
     text-white text-xxs md:text-base
-    p-2  ml-3.5 md:py-2 md:px-4 md:ml-4
+    p-2 ml-3.5 md:py-2 md:px-4 md:ml-4 last:mr-3.5
     bg-[#c3c3c3]/20
   ;
 }
