@@ -101,35 +101,40 @@ html
           | A best and cheapest way of getting know learning to make a better
           | tomorrow.
 
-    footer
-      .box
-        section.app-description
-          img
-          p
+    footer.text-white(class="bg-[#050c23]")
+      .box.flex.flex-col.py-8(class="md:flex-row md:pt-14")
+        section.app-description.flex-1.pr-16
+          h1.small Sales Axis
+          p.text-xs.pt-3(class="md:text-sm md:pt-4 max-w-prose")
             | Our webapp, Sales Axis, is the platform for solution providers who
             | are looking to connect with more front end sales & consultants.
-        section.links
-          article
-            h3 Pages
-            ul
-              li: a Product View
-              li: a User dashboard
-              li: a User's Lead page
-          article
-            h3 About
-            ul
-              li: a Our Story
-              li: a Privacy policy
-        section.newsletter
-          h3 Subscribe to our newsletter
-          form
-            input(type="email", placeholder="Email address")
-            input(type="submit", value=">")
-          ul.social
-            li: a F
-            li: a I
-            li: a T
-            li: a L
+
+        section.links.flex-1.flex.flex-row.py-8(class="md:py-0 md:pr-8")
+          article.flex-1.pr-8
+            h3.font-medium.leading-snug(class="md:text-lg md:leading-snug") Pages
+            ul.pt-2.text-sm.leading-8(class="text-white/60")
+              li: a(href="#") Product View
+              li: a(href="#") User dashboard
+              li: a(href="#") User's Lead page
+          article.flex-1
+            h3.font-medium.leading-snug(class="md:text-lg md:leading-snug") About
+            ul.pt-2.text-sm.leading-8(class="text-white/60")
+              li: a(href="#") Our Story
+              li: a(href="#") Privacy policy
+
+        section.newsletter.flex-initial
+          h3.font-medium.leading-snug(class="md:text-lg max-w-[12rem] md:leading-snug") Subscribe to our newsletter
+          form.flex.py-4(class="md:pt-8")
+            input.block.h-12.flex-1.bg-transparent.border-b.text-sm(class="border-b-white/10", type="email", placeholder="Email address")
+            input.block.h-12.w-12.bg-brand-blue.text-white.rounded-t-lg(type="submit", value=">")
+          ul.social.flex.justify-end(class="md:justify-start")
+            +social_icon("f", "#")
+            +social_icon("i", "#")
+            +social_icon("t", "#")
+            +social_icon("l", "#")
+
+    footer(class="bg-[#050c23] border-t border-t-[#103658] text-white/50 text-xxs md:text-xs text-center")
+      .box.py-8 &copy; SALES AXIS. All rights reserved
 
   script.
     const swipes = document.querySelectorAll(".swipe")

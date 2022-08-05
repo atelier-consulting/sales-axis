@@ -22,6 +22,13 @@ h1 {
   ;
 }
 
+h1.small {
+  @apply
+    w-logo-small bg-logo-small
+    -left-1 md:-left-2
+  ;
+}
+
 h2 {
   @apply
     py-6 md:py-8
@@ -29,4 +36,5 @@ h2 {
     font-semibold
   ;
 }
+
 
