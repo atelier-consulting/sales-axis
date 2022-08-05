@@ -11,6 +11,7 @@ module.exports = {
       },
       width: {
         logo: "152px",
+        "logo-small": "86px",
       },
       height: {
         trend: "28.5rem",
@@ -20,10 +21,12 @@ module.exports = {
       },
       backgroundImage: {
         logo: "url(\"img/logo.png\")",
+        "logo-small": "url(\"img/logo.png\")",
         trend: "linear-gradient(to right, rgba(0,0,0,.4), rgba(0,0,0,0)), var(--provided-img)",
       },
       backgroundSize: {
         logo: "152px auto",
+        "logo-small": "86px auto",
       },
     },
   },
