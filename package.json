@@ -1,14 +1,16 @@
 {
   "name": "slice-preset",
-  "version": "1.0.0",
+  "version": "0.8.0",
   "author": "Serge Tymoshenko <serge@tymo.name>",
   "license": "MIT",
   "scripts": {
     "dev": "parcel src/index.pug --dist-dir dev",
-    "prod": "parcel build src/index.pug --dist-dir prod --no-source-maps"
+    "prod": "parcel build src/index.pug --dist-dir prod --public-url . --no-source-maps --no-content-hash --no-cache",
+    "dist": "parcel build src/index.pug --dist-dir dist --public-url . --no-source-maps --no-optimize --no-content-hash --no-cache && html ./dist/index.html > ./dist/index.pretty.html && rm ./dist/index.html && mv ./dist/index.pretty.html ./dist/index.html"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.7.0",
+    "html": "^1.0.0",
     "parcel": "^2.7.0",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6"
