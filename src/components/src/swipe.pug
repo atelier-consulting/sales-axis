@@ -1,0 +1,8 @@
+mixin swipe(items, layout, item_width = 75, gap = 1)
+  - const track_width = items * item_width + "vw"
+  - const gaps = (items + 1) * gap + "rem"
+  if block
+    .swipe
+      .track(class=layout, style={width: "calc(" + track_width + " + " + gaps + ")"})
+        block
+

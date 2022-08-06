@@ -1,0 +1,9 @@
+mixin trending_product(title, description, commission, size_range, image)
+  .box.trending-product
+    h4 Trending product
+    h3= title
+    article(style="--provided-img: url(\"/src/img/" + image + "\")")
+      p= description
+      ul.flex.justify-between.pb-2(class="md:justify-start")
+        li Product commission: 12%
+        li Project size range: 500K USD

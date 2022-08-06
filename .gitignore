@@ -3,4 +3,5 @@ node_modules/
 dev
 dist
 prod
+showcase
 .DS_Store

@@ -1,0 +1,154 @@
+header.border-b(class="border-b-black/5")
+  .box.h-16.flex.justify-between.items-stretch
+    h1 SalesAxis
+    nav.auth.flex.items-center
+      a.block.ml-4.border.text-xs.px-4.py-2.rounded-sm(class="text-[#979797] md:text-sm border-[#f0f0f0] md:py-1") Log in
+      a.block.ml-4.bg-blue-600.text-white.text-xs.px-4.py-2.rounded-sm(class="md:text-sm md:py-1 bg-[#2a85ff]") Sign up
+
+section.pt-6.pb-4
+  +trending_product(
+    "Business Network for Logistics",
+    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "12%",
+    "500K USD",
+    "trending-product@1x.png",
+  )
+
+section.top-products
+  .box
+    h2 Top Products by Leads Industries 
+  +swipe(3)
+    +card(
+      "Southeast Asia market research and management consulting services",
+      "Consulting",
+      "product-image-1@2x.jpg",
+    )
+      +attributes("vertical md:horizontal")
+        +attr("Commission", "15%", "highlight", "%",)
+        +attr("Project size range", "$60K+", "accent", "$")
+
+    +card(
+      "Southeast Asia market research and management consulting services",
+      "Consulting",
+      "product-image-1@2x.jpg",
+    )
+      +attributes("horizontal md:vertical")
+        +attr("Commission", "15%", "highlight", "%")
+        +attr("Project size range", "$60K+", "accent", "$")
+
+    +card(
+      "Southeast Asia market research and management consulting services",
+      "Consulting",
+      "product-image-1@2x.jpg",
+    )
+      +attributes("horizontal md:horizontal")
+        +attr("Commission", "15%", "highlight", "%")
+        +attr("Project size range", "$60K+", "accent", "$")
+
+section.top-lead-types.pb-4
+  .box
+    h2 Top Successful Type of Leads
+  +swipe(4, "md:vertical")
+    +panel(
+      "Operation Director / COO",
+      "Fieldglass Contingent Workforce Management",
+      "It is a long established fact that a reader will be distracted by the readable content layout.",
+      "product-image-1@2x.jpg",
+      "https://google.com",
+    )
+      +attributes("vertical md:vertical")
+        +attr("Conversion rate", "27%", "highlight")
+        +attr("Average commission", "$60K+", "accent")
+
+    +panel(
+      "Operation Director / COO",
+      "Fieldglass Contingent Workforce Management",
+      "It is a long established fact that a reader will be distracted by the readable content layout.",
+      "product-image-1@2x.jpg",
+    )
+      +attributes("vertical md:vertical")
+        +attr("Conversion rate", "27%", "highlight")
+        +attr("Average commission", "$60K+", "accent")
+
+    +panel(
+      "Operation Director / COO",
+      "Fieldglass Contingent Workforce Management",
+      "It is a long established fact that a reader will be distracted by the readable content layout.",
+      "product-image-1@2x.jpg",
+    )
+      +attributes("vertical md:vertical")
+        +attr("Conversion rate", "27%", "highlight")
+        +attr("Average commission", "$60K+", "accent")
+
+    +panel(
+      "Operation Director / COO",
+      "Fieldglass Contingent Workforce Management",
+      "It is a long established fact that a reader will be distracted by the readable content layout.",
+      "product-image-1@2x.jpg",
+    )
+      +attributes("vertical md:vertical")
+        +attr("Conversion rate", "27%", "highlight")
+        +attr("Average commission", "$60K+", "accent")
+
+section.about.pt-10.pb-24(class="bg-[#fafafa]")
+  .box
+    h2 Who We Are
+    p.max-w-2xl.mx-auto.px-4.leading-6.text-center.text-sm(class="text-black/60 md:leading-7 md:text-lg md:font-light")
+      | Sales Axis is the platform for solution providers who are looking
+      | to connect with more front end sales & consultants. And it's for
+      | front end sales who are looking for new solution to sell. Simply
+      | fill out the required information, and you'll get matched with
+      | relevant solution providers.
+
+section.testimonials
+  .box
+    h2 What Our Users Say About Us
+    p
+      | A best and cheapest way of getting know learning to make a better
+      | tomorrow.
+
+footer.text-white(class="bg-[#050c23]")
+  .box.flex.flex-col.py-8(class="md:flex-row md:pt-14")
+    section.app-description.flex-1.pr-16
+      h1.small Sales Axis
+      p.text-xs.pt-3(class="md:text-sm md:pt-4 max-w-prose")
+        | Our webapp, Sales Axis, is the platform for solution providers who
+        | are looking to connect with more front end sales & consultants.
+
+    section.links.flex-1.flex.flex-row.py-8(class="md:py-0 md:pr-8")
+      article.flex-1.pr-8
+        h3.font-medium.leading-snug(class="md:text-lg md:leading-snug") Pages
+        ul.pt-2.text-sm.leading-8(class="text-white/60")
+          li: a(href="#") Product View
+          li: a(href="#") User dashboard
+          li: a(href="#") User's Lead page
+      article.flex-1
+        h3.font-medium.leading-snug(class="md:text-lg md:leading-snug") About
+        ul.pt-2.text-sm.leading-8(class="text-white/60")
+          li: a(href="#") Our Story
+          li: a(href="#") Privacy policy
+
+    section.newsletter.flex-initial
+      h3.font-medium.leading-snug(class="md:text-lg max-w-[12rem] md:leading-snug") Subscribe to our newsletter
+      form.flex.py-4(class="md:pt-8")
+        input.block.h-12.flex-1.bg-transparent.border-b.text-sm(class="border-b-white/10", type="email", placeholder="Email address")
+        input.block.h-12.w-12.bg-brand-blue.text-white.rounded-t-lg(type="submit", value=">")
+      ul.social.flex.justify-end(class="md:justify-start")
+        +social_icon("f", "#")
+        +social_icon("i", "#")
+        +social_icon("t", "#")
+        +social_icon("l", "#")
+
+footer(class="bg-[#050c23] border-t border-t-[#103658] text-white/50 text-xxs md:text-xs text-center")
+  .box.py-8 &copy; SALES AXIS. All rights reserved
+
+script.
+  const swipes = document.querySelectorAll(".swipe")
+  swipes.forEach(swipe => {
+    const obs = new IntersectionObserver(
+      entries => { entries.forEach(e => e.target.classList.toggle("shadow-lg", e.isIntersecting)) },
+      { root: swipe, threshold: .75, }
+    )
+    const items = swipe.querySelectorAll(".track>*")
+    items.forEach(item => { obs.observe(item) })
+  })

@@ -1,32 +1,21 @@
-mixin card(title, category, image, href, name, position)
-  if href
-    a.card(href=href)
-      if name
-        h5= name
-      if position
-        h6= position
-      if image
-        figure(class="px-3.5 mb-5")
-          img(src=image)
-      if category
-        h4= category
-      if title
-        h3= title
-      if block
-        block
-  else
-    article.card
-      if name
-        h5= name
-      if position
-        h6= position
-      if image
-        figure
-          img(src=image)
-      if category
-        h4= category
-      if title
-        h3= title
-      if block
-        block
+extends ../blueprints/base
 
+block includes
+  include src/attribute
+  include src/card
+  style.
+    @tailwind base;
+
+block root
+  style.
+    @import "/src/components/src/attribute.css";
+    @import "/src/components/src/card.css";
+
+  +card(
+    "Southeast Asia market research and management consulting services",
+    "Consulting",
+    "product-image-1@2x.jpg",
+  )
+    +attributes("vertical md:horizontal")
+      +attr("Commission", "15%", "highlight", "%",)
+      +attr("Project size range", "$60K+", "accent", "$")

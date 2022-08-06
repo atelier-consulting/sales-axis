@@ -1,0 +1,17 @@
+mixin panel(title, subtitle, description, image, btn)
+  - const synopsis = title || subtitle || description
+  article.panel(class!=attributes.class)
+    if image
+      img(src="/src/img/" + image, class="hidden md:block h-[6.25rem]")
+    if synopsis
+      .synopsis
+        if title
+          h3= title
+        if subtitle
+          h4= subtitle
+        if description
+          p(class={"hidden": !!btn})= description
+      if block
+        block
+      if btn
+        a(href=btn) View

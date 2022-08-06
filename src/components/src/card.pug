@@ -1,0 +1,32 @@
+mixin card(title, category, image, href, name, position)
+  if href
+    a.card(href=href)
+      if name
+        h5= name
+      if position
+        h6= position
+      if image
+        figure(class="px-3.5 mb-5")
+          img(src="/src/img/" + image)
+      if category
+        h4= category
+      if title
+        h3= title
+      if block
+        block
+  else
+    article.card
+      if name
+        h5= name
+      if position
+        h6= position
+      if image
+        figure
+          img(src="/src/img/" + image)
+      if category
+        h4= category
+      if title
+        h3= title
+      if block
+        block
+

@@ -2,9 +2,7 @@ extends blueprints/base
 
 block includes
   include components/all
-  style.
-    @import "/src/index.css";
-    @import "/src/components/all.css";
+  link(href="/src/prod.css", rel="stylesheet")
 
 block root
   include content/landing
