@@ -1,13 +1,15 @@
-mixin attributes(layout)
-  ul.attributes(class=layout)
-    if block
-      block
+extends ../blueprints/base
 
-mixin attr(title, value, variant, icon, layout)
-  li.attr(class=layout)
-    if icon
-      .icon= icon
-    if title
-      .title= title
-    if value
-      .value(class=variant)= value 
+block includes
+  include src/attribute
+  style.
+    @tailwind base;
+
+block root
+  style.
+    @import "/src/components/src/attribute.css";
+
+  +attributes
+    +attr("Commission", "15%", "highlight", "%",)
+    +attr("Project size range", "$60K+", "accent", "$")
+    

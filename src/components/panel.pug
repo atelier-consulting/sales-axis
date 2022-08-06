@@ -1,17 +1,24 @@
-mixin panel(title, subtitle, description, image, btn)
-  - const synopsis = title || subtitle || description
-  article.panel(class!=attributes.class)
-    if image
-      img(src=image, class="hidden md:block h-[6.25rem]")
-    if synopsis
-      .synopsis
-        if title
-          h3= title
-        if subtitle
-          h4= subtitle
-        if description
-          p(class={"hidden": !!btn})= description
-      if block
-        block
-      if btn
-        a(href=btn) View
+extends ../blueprints/base
+
+block includes
+  include src/attribute
+  include src/panel
+  style.
+    @tailwind base;
+
+block root
+  style.
+    @import "/src/components/src/attribute.css";
+    @import "/src/components/src/panel.css";
+
+  +panel(
+    "Operation Director / COO",
+    "Fieldglass Contingent Workforce Management",
+    "It is a long established fact that a reader will be distracted by the readable content layout.",
+    "product-image-1@2x.jpg",
+    "https://google.com",
+  )
+    +attributes("vertical md:vertical")
+      +attr("Conversion rate", "27%", "highlight")
+      +attr("Average commission", "$60K+", "accent")
+

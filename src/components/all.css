@@ -1,6 +1,6 @@
-@import "./trending_product.css";
-@import "./card.css";
-@import "./panel.css";
-@import "./attribute.css";
-@import "./swipe.css";
-@import "./social_icon.css";
+@import "/src/components/src/trending_product.css";
+@import "/src/components/src/card.css";
+@import "/src/components/src/panel.css";
+@import "/src/components/src/attribute.css";
+@import "/src/components/src/swipe.css";
+@import "/src/components/src/social_icon.css";

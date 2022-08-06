@@ -1,0 +1,13 @@
+mixin attributes(layout="vertical md:horizontal")
+  ul.attributes(class=layout)
+    if block
+      block
+
+mixin attr(title, value, variant, icon)
+  li.attr
+    if icon
+      .icon= icon
+    if title
+      .title= title
+    if value
+      .value(class=variant)= value 

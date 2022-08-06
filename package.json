@@ -4,15 +4,47 @@
   "author": "Serge Tymoshenko <serge@tymo.name>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel src/index.pug --dist-dir dev",
-    "prod": "parcel build src/index.pug --dist-dir prod --public-url . --no-source-maps --no-content-hash --no-cache",
-    "dist": "parcel build src/index.pug --dist-dir dist --public-url . --no-source-maps --no-optimize --no-content-hash --no-cache && html ./dist/index.html > ./dist/index.pretty.html && rm ./dist/index.html && mv ./dist/index.pretty.html ./dist/index.html"
+    "dev": "parcel serve --target development",
+    "prod": "parcel build --target production && mv ./prod/prod.html ./prod/index.html",
+    "show": "parcel build --target showcase",
+    "dist": "parcel build --target distribution && yarn pretty",
+    "pretty": "js-beautify --html -f './dist/**/*.html' -r -s 2"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.7.0",
-    "html": "^1.0.0",
+    "js-beautify": "^1.14.4",
     "parcel": "^2.7.0",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6"
+  },
+  "targets": {
+    "development": {
+      "source": "src/index.pug",
+      "distDir": "dev"
+    },
+    "production": {
+      "source": "src/prod.pug",
+      "distDir": "prod",
+      "optimize": true,
+      "sourceMap": false,
+      "publicUrl": "."
+    },
+    "showcase": {
+      "source": "src/index.pug",
+      "distDir": "showcase",
+      "optimize": true,
+      "sourceMap": false,
+      "publicUrl": "."
+    },
+    "distribution": {
+      "source": [
+        "src/index.pug",
+        "src/components.pug"
+      ],
+      "distDir": "dist",
+      "optimize": false,
+      "sourceMap": false,
+      "publicUrl": "."
+    }
   }
 }

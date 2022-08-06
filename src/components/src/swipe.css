@@ -11,7 +11,7 @@
 .track {
   @apply
     flex flex-row
-    md:w-auto
+    md:!w-auto
     px-4 md:px-8
     pb-6
   ;

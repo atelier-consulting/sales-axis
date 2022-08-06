@@ -1,8 +1,30 @@
-mixin swipe(items, cls, item_width = 75, gap = 1)
-  - const track_width = items * item_width + "vw"
-  - const gaps = (items + 1) * gap + "rem"
-  if block
-    .swipe
-      .track(class=cls, style={ width: "calc(" + track_width + " + " + gaps + ")" }, class="md:!w-auto")
-        block
+extends ../blueprints/base
+
+block includes
+  include src/card
+  include src/swipe
+  style.
+    @tailwind base;
+
+block root
+  style.
+    @import "/src/components/src/card.css";
+    @import "/src/components/src/swipe.css";
+
+  +swipe(3)
+    +card(
+      "Southeast Asia market research and management consulting services",
+      "Consulting",
+      "product-image-1@2x.jpg",
+    )
+    +card(
+      "Southeast Asia market research and management consulting services",
+      "Consulting",
+      "product-image-1@2x.jpg",
+    )
+    +card(
+      "Southeast Asia market research and management consulting services",
+      "Consulting",
+      "product-image-1@2x.jpg",
+    )
 
