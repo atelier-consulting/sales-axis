@@ -9,6 +9,6 @@ Client has design of landing page and user dashboard in Figma. Pages have severa
 - [Parcel](https://parceljs.org/)'s [Targets](https://parceljs.org/features/targets/) for setting up multiple build configurations: complete minified pages for production, isolated and human-readable components for incorporating into any framework.
 
 ## Result
-- Grab both minified and human-readable versions from [latest release](https://atelier-consulting/sales-axis/releases/latest). 
+- Grab both minified and human-readable versions from [latest release](https://github.com/atelier-consulting/sales-axis/releases/latest). 
 - View [sliced landing](https://atelier.consulting/projects/sales-axis/showcase/) in browser.
 
