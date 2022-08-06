@@ -23,12 +23,22 @@ jobs:
       - name: Generate pretty-printed assets
         run: yarn dist
 
-      - name: Compress assets
+      - name: Generate minified assets
+        run: yarn prod
+
+      - name: Compress pretty-printed assets
         uses: montudor/action-zip@v1
         with:
           args: zip -qq -r ${{ github.ref_name }}.zip dist
 
+      - name: Compress minified assets
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r ${{ github.ref_name }}.min.zip prod
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: ${{ github.ref_name }}.zip
+          files: |
+            ${{ github.ref_name }}.zip
+            ${{ github.ref_name }}.min.zip
