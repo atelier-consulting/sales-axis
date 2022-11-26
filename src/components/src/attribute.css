@@ -56,7 +56,7 @@
 }
 
 .attributes > .attr > .icon {
-  @apply text-black/60 text-xs md:text-sm;
+  @apply text-monsoon text-xs md:text-sm;
 }
 
 .attributes.horizontal > .attr > .icon {
@@ -84,7 +84,7 @@
 }
 
 .attributes > .attr > .title {
-  @apply text-black/60 text-xs md:text-sm;
+  @apply text-monsoon text-xs md:text-sm;
 }
 
 .attributes.horizontal > .attr > .title {
@@ -129,11 +129,11 @@
 }
 
 .attributes.horizontal > .attr > .value.accent {
-  @apply font-bold text-[#2a85ff];
+  @apply font-bold text-brand-blue;
 }
 
 .attributes.horizontal > .attr > .value.highlight {
-  @apply rounded-l-full bg-[#28c25d] text-white pl-4;
+  @apply rounded-l-full bg-brand-green text-white pl-4;
 }
 
 .attributes.vertical > .attr > .value {
@@ -141,11 +141,11 @@
 }
 
 .attributes.vertical > .attr > .value.accent {
-  @apply font-bold text-[#2a85ff] text-lg;
+  @apply font-bold text-brand-blue text-lg;
 }
 
 .attributes.vertical > .attr > .value.highlight {
-  @apply font-bold text-[#28c25d] text-lg;
+  @apply font-bold text-brand-green text-lg;
 }
 
 /* ((( */
@@ -159,13 +159,13 @@
 }
 
 .attributes.md\:horizontal > .attr > .value.accent {
-  @apply md:font-bold md:text-[#2a85ff] md:text-base;
+  @apply md:font-bold md:text-brand-blue md:text-base;
 }
 
 .attributes.md\:horizontal > .attr > .value.highlight {
   @apply
     md:rounded-l-full
-    md:bg-[#28c25d]
+    md:bg-brand-green
     md:text-white md:text-base md:font-normal
     md:pl-4;
 }
@@ -180,13 +180,13 @@
 }
 
 .attributes.md\:vertical > .attr > .value.accent {
-  @apply md:font-bold md:text-[#2a85ff] md:text-base;
+  @apply md:font-bold md:text-brand-blue md:text-base;
 }
 
 .attributes.md\:vertical > .attr > .value.highlight {
   @apply
     md:rounded-none
     md:bg-transparent
-    md:text-[#28c25d] md:text-lg md:font-bold
+    md:text-brand-green md:text-lg md:font-bold
     md:pl-0;
 }

@@ -1,9 +1,9 @@
-header.border-b(class="border-b-black/5")
+header.border-b.border-b-concrete
   .box.h-16.flex.justify-between.items-stretch
     h1 SalesAxis
     nav.auth.flex.items-center
-      a.block.ml-4.border.text-xs.px-4.py-2.rounded-sm(class="text-[#979797] md:text-sm border-[#f0f0f0] md:py-1") Log in
-      a.block.ml-4.bg-blue-600.text-white.text-xs.px-4.py-2.rounded-sm(class="md:text-sm md:py-1 bg-[#2a85ff]") Sign up
+      a.block.ml-4.border.text-xs.text-monsoon.border-concrete.px-4.py-2.rounded-sm(class="md:text-sm md:py-1") Log in
+      a.block.ml-4.bg-brand-blue.text-white.text-xs.px-4.py-2.rounded-sm(class="md:text-sm md:py-1") Sign up
 
 section.pt-6.pb-4
   +trending_product(
@@ -90,41 +90,34 @@ section.top-lead-types.pb-4
         +attr("Conversion rate", "27%", "highlight")
         +attr("Average commission", "$60K+", "accent")
 
-section.about.pt-10.pb-24(class="bg-[#fafafa]")
+section.about.pt-10.pb-24.bg-concrete
   .box
     h2 Who We Are
-    p.max-w-2xl.mx-auto.px-4.leading-6.text-center.text-sm(class="text-black/60 md:leading-7 md:text-lg md:font-light")
+    p.max-w-2xl.mx-auto.px-4.leading-6.text-center.text-sm.text-monsoon(class="md:leading-7 md:text-lg md:font-light")
       | Sales Axis is the platform for solution providers who are looking
       | to connect with more front end sales & consultants. And it's for
       | front end sales who are looking for new solution to sell. Simply
       | fill out the required information, and you'll get matched with
       | relevant solution providers.
 
-section.testimonials
-  .box
-    h2 What Our Users Say About Us
-    p
-      | A best and cheapest way of getting know learning to make a better
-      | tomorrow.
-
-footer.text-white(class="bg-[#050c23]")
+footer.text-white.bg-pearl
   .box.flex.flex-col.py-8(class="md:flex-row md:pt-14")
     section.app-description.flex-1.pr-16
       h1.small Sales Axis
-      p.text-xs.pt-3(class="md:text-sm md:pt-4 max-w-prose")
+      p.text-xs.pt-3.max-w-prose(class="md:text-sm md:pt-4")
         | Our webapp, Sales Axis, is the platform for solution providers who
         | are looking to connect with more front end sales & consultants.
 
     section.links.flex-1.flex.flex-row.py-8(class="md:py-0 md:pr-8")
       article.flex-1.pr-8
         h3.font-medium.leading-snug(class="md:text-lg md:leading-snug") Pages
-        ul.pt-2.text-sm.leading-8(class="text-white/60")
+        ul.pt-2.text-sm.text-monsoon.leading-8
           li: a(href="#") Product View
           li: a(href="#") User dashboard
           li: a(href="#") User's Lead page
       article.flex-1
         h3.font-medium.leading-snug(class="md:text-lg md:leading-snug") About
-        ul.pt-2.text-sm.leading-8(class="text-white/60")
+        ul.pt-2.text-sm.text-monsoon.leading-8
           li: a(href="#") Our Story
           li: a(href="#") Privacy policy
 
@@ -139,7 +132,7 @@ footer.text-white(class="bg-[#050c23]")
         +social_icon("t", "#")
         +social_icon("l", "#")
 
-footer(class="bg-[#050c23] border-t border-t-[#103658] text-white/50 text-xxs md:text-xs text-center")
+footer(class="bg-pearl border-t border-t-[#103658] text-tuna text-xxs md:text-xs text-center")
   .box.py-8 &copy; SALES AXIS. All rights reserved
 
 script.
