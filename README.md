@@ -1,7 +1,10 @@
 # Sales Axis
 
 ## Brief
-Client has design of landing page and user dashboard in Figma. Pages have several common reusable components, some of them should have configurable appearance and layout. Client wants those pages sliced into plain HTML and CSS that can be used without any third party library. Also client wants those reusable components to be easily implemented in any backend or frontend technology.
+Client has design of landing page and user dashboard in Figma.
+Pages have several common reusable components, some of them should have configurable appearance and layout.
+Client wants those pages sliced into plain HTML and CSS that can be used without any third party library.
+Also client wants those reusable components to be easily implemented in any backend or frontend technology.
 
 ## Tools
 - [Pug](https://tailwindcss.com) as templating language, utilizing mixins for component isolation and reusability.
