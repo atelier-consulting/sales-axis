@@ -1,10 +1,10 @@
 .panel {
   @apply
     rounded-lg bg-white
-    border border-black/5
-    md:h-[7.5rem]
+    border border-concrete
+    md:h-panel
     md:flex
-    w-[75vw] md:w-auto min-w-[75vw] md:min-w-0
+    w-card md:w-auto min-w-card md:min-w-0
     ml-4 first:ml-0 md:ml-0 md:mb-5
     snap-center
   ;
@@ -19,7 +19,7 @@
     flex-initial
     mx-3.5 md:mx-0
     pt-3.5 md:pr-4
-    border-b border-b-black/5 md:border-none
+    border-b border-b-concrete md:border-none
   ;
 }
 
@@ -34,7 +34,7 @@
 .panel h4 {
   @apply
     pb-2.5
-    text-xs md:text-sm text-black/80
+    text-xs md:text-sm text-tuna
   ;
 }
 
@@ -42,7 +42,7 @@
   @apply
     md:block
     pb-2.5 md:pb-0
-    text-xs text-black/60
+    text-xs text-monsoon
   ;
 }
 
@@ -54,9 +54,9 @@
 .panel a {
   @apply
     self-center
-    text-[#2a85ff] text-center
-    border border-[#2a85ff] rounded
-    bg-white hover:bg-[#2a85ff]/5
+    text-brand-blue text-center
+    border border-brand-blue rounded
+    bg-white hover:bg-brand-blue/5
     md:w-32 h-9
     flex items-center justify-center
     my-5 mx-3.5 md:mx-8
