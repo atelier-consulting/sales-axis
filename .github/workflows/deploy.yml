@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '16'
-      - run: yarn install --frozen-lockfile
+      - run: yarn install --no-lockfile
       - run: yarn deploy github
         env:
           FTP_USER: ${{ secrets.FTP_USER }}
