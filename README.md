@@ -13,5 +13,5 @@ Also client wants those reusable components to be easily implemented using any b
 
 ## Result
 - Grab both minified and human-readable versions from [latest release](https://github.com/atelier-consulting/sales-axis/releases/latest). 
-- View [sliced landing](https://atelier.consulting/projects/sales-axis/showcase/) in browser.
+- View [sliced landing](https://atelier.consulting/clients/sales-axis/showcase/) in browser.
 
