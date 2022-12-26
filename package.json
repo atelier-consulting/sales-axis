@@ -8,7 +8,8 @@
     "prod": "parcel build --target production && mv ./prod/prod.html ./prod/index.html",
     "show": "parcel build --target showcase",
     "dist": "parcel build --target distribution && yarn pretty",
-    "pretty": "js-beautify --html -f './dist/**/*.html' -r -s 2"
+    "pretty": "js-beautify --html -f './dist/**/*.html' -r -s 2",
+    "deploy": "yarn show && node deploy"
   },
   "devDependencies": {
     "@parcel/transformer-pug": "^2.7.0",
